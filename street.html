@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Street</title>
+    <style>
+        body {
+            padding: 50px;
+        }
+        #street {
+            width: 1200px;
+            height: 600px;
+            border: 1px dashed black;
+            display: inline-block;
+            background-image: url(3061.jpg);
+            background-repeat: no-repeat;
+            background-size:1200px 600px ;
+        }
+        .chimney {
+            width: 15px;
+            height: 20px;
+            border-left: 2px solid rgb(67, 23, 23);
+            border-right: 2px solid rgb(67, 23, 23);
+            border-top: 2px solid rgb(67, 23, 23);
+            background-color:rgb(67, 23, 23) ;
+            transform: translateX(100px) translateY(410px);
+        }
+        .home1 {
+            width: 200px;
+            height: 100px;
+            margin-top: 431px;
+        }
+        .build1 {
+            width: 100px;
+            height: 500px;
+            margin-left: 200px;
+            margin-top: -542px;
+        }
+        .bank {
+            width: 250px;
+            height: 150px;
+            margin-left: 300px;
+            margin-top: -138px;
+        }
+        .home2 {
+            width: 150px;
+            height: 150px;
+            margin-left: 550px;
+            margin-top: -150px;
+        }
+        .build2 {
+            width: 300px;
+            height: 500px;
+            margin-left: 700px;
+            margin-top: -500px;
+        }
+        .home3 {
+            width: 200px;
+            height: 400px;
+            margin-left: 1000px;
+            margin-top: -430px;
+        }
+        .front-wall {
+            width: 150px;
+            height: 70px;
+            background-color:rgb(209, 136, 0);
+            margin-top: 30px;
+        }
+        .front-wall-door {
+            width: 30px;
+            height: 50px;
+            border: 3px solid white;
+            background-color: crimson;
+            transform: translateX(18px) translateY(15px);
+        }
+        .front-wall-window {
+            width: 20px;
+            height: 20px;
+            border: 3px solid white;
+            background-color:aqua;
+            transform: translateX(66px) translateY(-40px);
+        }
+        .front-wall-window2 {
+            width: 20px;
+            height: 20px;
+            border: 3px solid white;
+            background-color:aqua;
+            transform: translateX(106px) translateY(-65px);
+        }
+        .wall {
+            width: 50px;
+            height: 70px;
+            background-color: rgb(246, 177, 48);
+            margin-left: 150px;
+            margin-top: -70px;
+        }
+        .wall-window {
+            width: 20px;
+            height: 20px;
+            border: 3px solid white;
+            background-color:aqua;
+            transform: translateX(13px) translateY(15px);
+        }
+        .roof-front {
+            width: 0px;
+            margin-top: -99px;
+            border: 75px solid red;
+            border-top-width: 0px;
+            border-left-color: transparent;
+            border-right-color: brown;
+            border-bottom-color: brown;
+            border-bottom-width: 30px;
+        }
+        .roof {
+            margin-top: -30px;
+            border: 30px solid red;
+            border-top-width: 0px;
+            border-left-color: brown;
+            border-right-color: transparent;
+            border-bottom-color: rgb(220, 65, 65);
+            border-bottom-width: 31px;
+            margin-left: 149px;
+        }
+        .roof-build1 {
+            border: 60px solid red;
+            border-top-width: 0px;
+            border-left-color: transparent;
+            border-right-color: transparent;
+            border-bottom-color: rgb(24, 24, 124);
+            border-bottom-width: 90px;
+            margin-left: -10px;
+        }
+        .roof-build1-window {
+            width: 20px;
+            height: 20px;
+            border: 3px solid brown;
+            background-color:black;
+            transform: translateX(-13px) translateY(75px);
+            border-radius: 10px;
+        }
+        .wall-build1 {
+            width: 100px;
+            height: 400px;
+            background-color: rgb(36, 118, 36);
+        }
+        .wall-build1-window1 {
+            width: 20px;
+            height: 20px;
+            border: 3px solid brown;
+            background-color:grey;
+            transform: translateX(15px) translateY(10px);
+        }
+        .wall-build1-window2 {
+            width: 20px;
+            height: 20px;
+            border: 3px solid brown;
+            background-color:grey;
+            transform: translateX(60px) translateY(-15px);
+        }
+        .wall-build1-window3 {
+            width: 20px;
+            height: 20px;
+            border: 3px solid brown;
+            background-color:rgb(0, 204, 255);
+            transform: translateX(15px) translateY(-5px);
+        }
+        .wall-build1-window4 {
+            width: 20px;
+            height: 20px;
+            border: 3px solid brown;
+            background-color:grey;
+            transform: translateX(60px) translateY(-30px);
+        }
+        .wall-build1-window5 {
+            width: 20px;
+            height: 20px;
+            border: 3px solid brown;
+            background-color:grey;
+            transform: translateX(15px) translateY(-20px);
+        }
+        .wall-build1-window6 {
+            width: 20px;
+            height: 20px;
+            border: 3px solid brown;
+            background-color:grey;
+            transform: translateX(60px) translateY(-45px);
+        }
+        .wall-build1-window7 {
+            width: 20px;
+            height: 20px;
+            border: 3px solid brown;
+            background-color:rgb(0, 204, 255);
+            transform: translateX(15px) translateY(-35px);
+        }
+        .wall-build1-window8 {
+            width: 20px;
+            height: 20px;
+            border: 3px solid brown;
+            background-color:grey;
+            transform: translateX(60px) translateY(-60px);
+        }
+        .wall-build1-window9 {
+            width: 20px;
+            height: 20px;
+            border: 3px solid brown;
+            background-color:grey;
+            transform: translateX(15px) translateY(-45px);
+        }
+        .wall-build1-window10 {
+            width: 20px;
+            height: 20px;
+            border: 3px solid brown;
+            background-color:rgb(0, 204, 255);
+            transform: translateX(60px) translateY(-70px);
+        }
+        .wall-build1-window11 {
+            width: 20px;
+            height: 20px;
+            border: 3px solid brown;
+            background-color:grey;
+            transform: translateX(15px) translateY(-55px);
+        }
+        .wall-build1-window12 {
+            width: 20px;
+            height: 20px;
+            border: 3px solid brown;
+            background-color:grey;
+            transform: translateX(60px) translateY(-80px);
+        }
+        .wall-build1-window13 {
+            width: 20px;
+            height: 20px;
+            border: 3px solid brown;
+            background-color:grey;
+            transform: translateX(15px) translateY(-65px);
+        }
+        .wall-build1-window14 {
+            width: 20px;
+            height: 20px;
+            border: 3px solid brown;
+            background-color:rgb(0, 204, 255);
+            transform: translateX(60px) translateY(-90px);
+        }
+        .wall-build1-window15 {
+            width: 20px;
+            height: 20px;
+            border: 3px solid brown;
+            background-color:grey;
+            transform: translateX(15px) translateY(-75px);
+        }
+        .wall-build1-window16 {
+            width: 20px;
+            height: 20px;
+            border: 3px solid brown;
+            background-color:grey;
+            transform: translateX(60px) translateY(-100px);
+        }
+        .wall-build1-window17 {
+            width: 20px;
+            height: 20px;
+            border: 3px solid brown;
+            background-color:grey;
+            transform: translateX(15px) translateY(-85px);
+        }
+        .wall-build1-window18 {
+            width: 20px;
+            height: 20px;
+            border: 3px solid brown;
+            background-color:grey;
+            transform: translateX(60px) translateY(-110px);
+        }
+        .wall-build1-door {
+            width: 40px;
+            height: 50px;
+            border: 3px solid brown;
+            background-color:rgb(75, 16, 130);
+            transform: translateX(28px) translateY(-104px);
+        }
+        .wall-bank {
+            width: 250px;
+            height: 150px;
+            background-color: rgb(5, 140, 230);
+        }
+        .bank-window1 {
+            width: 40px;
+            height: 100px;
+            border: 2px solid green;
+            transform: translateX(15px) translateY(1px);
+            background-color: rgba(0, 255, 255, 0.573);
+        }
+        .bank-window2 {
+            width: 40px;
+            height: 100px;
+            border: 2px solid green;
+            transform: translateX(75px) translateY(-102px);
+            background-color: rgba(0, 255, 255, 0.573);
+        }
+        .bank-window3 {
+            width: 40px;
+            height: 100px;
+            border: 2px solid green;
+            transform: translateX(133px) translateY(-205px);
+            background-color: rgba(0, 255, 255, 0.573);
+        }
+        .bank-window4 {
+            width: 40px;
+            height: 100px;
+            border: 2px solid green;
+            transform: translateX(190px) translateY(-308px);
+            background-color: rgba(0, 255, 255, 0.573);
+        }
+        .roof-home2 {
+            width: 0px;
+            height: 0px;
+            border: 75px solid red;
+            border-top-width: 0px;
+            border-left-color: transparent;
+            border-right-color: transparent;
+            border-bottom-color: rgb(79, 3, 3);
+            border-bottom-width: 120px;
+        }
+        .roof-home2-window {
+            width: 50px;
+            height: 50px;
+            border: 2px solid red;
+            transform: translateX(-28px) translateY(55px);
+            border-radius: 30px;
+            background-color: rgb(74, 74, 74);
+        }
+        .wall-home2 {
+            width: 110px;
+            height: 30px;
+            background-color: rgb(171, 171, 0);
+            margin-left: 20px;
+        }
+        .wall-home2-window1 {
+            width: 10px;
+            height: 10px;
+            border: 2px solid green;
+            transform: translateX(20px) translateY(10px);
+            background-color: gray;
+        }
+        .wall-home2-door {
+            width: 10px;
+            height: 15px;
+            border: 2px solid green;
+            transform: translateX(50px) translateY(-3px);
+            background-color: green;
+        }
+        .wall-home2-window2 {
+            width: 10px;
+            height: 10px;
+            border: 2px solid green;
+            transform: translateX(80px) translateY(-22px);
+            background-color: aqua;
+        }
+        .wall-build2 {
+            width: 300px;
+            height: 470px;
+            background-color: gray;
+            margin-top: 30px;
+        }
+        .wall-build2-window1 {
+            width: 40px;
+            height: 70px;
+            border: 2px solid black;
+            transform: translateX(20px) translateY(15px);
+            background-color: aquamarine;
+        }
+        .wall-build2-window2 {
+            width: 40px;
+            height: 70px;
+            border: 2px solid black;
+            transform: translateX(90px) translateY(-58px);
+            background-color: aquamarine;
+        }
+        .wall-build2-window3 {
+            width: 40px;
+            height: 70px;
+            border: 2px solid black;
+            transform: translateX(160px) translateY(-132px);
+            background-color: rgb(176, 150, 150);
+        }
+        .wall-build2-window4 {
+            width: 40px;
+            height: 70px;
+            border: 2px solid black;
+            transform: translateX(230px) translateY(-205px);
+            background-color: rgb(176, 150, 150);
+        }
+        .wall-build2-window5 {
+            width: 40px;
+            height: 70px;
+            border: 2px solid black;
+            transform: translateX(20px) translateY(-150px);
+            background-color: rgb(176, 150, 150);
+        }
+        .wall-build2-window6 {
+            width: 40px;
+            height: 70px;
+            border: 2px solid black;
+            transform: translateX(90px) translateY(-223px);
+            background-color: rgb(176, 150, 150);
+        }
+        .wall-build2-window7 {
+            width: 40px;
+            height: 70px;
+            border: 2px solid black;
+            transform: translateX(160px) translateY(-297px);
+            background-color: aquamarine;
+        }
+        .wall-build2-window8 {
+            width: 40px;
+            height: 70px;
+            border: 2px solid black;
+            transform: translateX(230px) translateY(-370px);
+            background-color: rgb(176, 150, 150);
+        }
+        .wall-build2-window9 {
+            width: 40px;
+            height: 70px;
+            border: 2px solid black;
+            transform: translateX(20px) translateY(-320px);
+            background-color: rgb(176, 150, 150);
+        }
+        .wall-build2-window10 {
+            width: 40px;
+            height: 70px;
+            border: 2px solid black;
+            transform: translateX(90px) translateY(-393px);
+            background-color: aquamarine;
+        }
+        .wall-build2-window11 {
+            width: 40px;
+            height: 70px;
+            border: 2px solid black;
+            transform: translateX(160px) translateY(-466px);
+            background-color: rgb(176, 150, 150);
+        }
+        .wall-build2-window12 {
+            width: 40px;
+            height: 70px;
+            border: 2px solid black;
+            transform: translateX(230px) translateY(-540px);
+            background-color: rgb(176, 150, 150);
+        }
+        .wall-build2-door1 {
+            width: 80px;
+            height: 80px;
+            border: 2px solid black;
+            transform: translateX(35px) translateY(-493px);
+            background-color: cadetblue;
+        }
+        .wall-build2-door2 {
+            width: 80px;
+            height: 80px;
+            border: 2px solid black;
+            transform: translateX(175px) translateY(-575px);
+            background-color: cadetblue;
+        }
+        .roof-build2 {
+            width: 300px;
+            height: 30px;
+            background-color: rgb(100, 100, 100);
+            margin-top: -500px;
+        }
+        .roof-home3 {
+            width: 100px;
+            height: 0px;
+            border: 51px solid red;
+            border-top-width: 0px;
+            border-left-color: transparent;
+            border-right-color: transparent;
+            border-bottom-color: rgb(156, 79, 25);
+            border-bottom-width: 100px;
+        }
+        .roof-home3-window1 {
+            width: 30px;
+            height: 30px;
+            border: 2px solid rgb(98, 2, 2);
+            transform:translateY(40px);
+            background-color: rgb(67, 66, 66);
+            background-color: cornflowerblue;
+        }
+        .roof-home3-window2 {
+            width: 30px;
+            height: 30px;
+            border: 2px solid rgb(98, 2, 2);
+            transform: translateX(65px) translateY(7px);
+            background-color: rgb(67, 66, 66);
+        }
+        .wall-home3 {
+            width: 200px;
+            height: 300px;
+            background-color: rgb(243, 204, 155);
+        }
+        .wall-home3-window1 {
+            width: 50px;
+            height: 60px;
+            border: 2px solid rgb(98, 2, 2);
+            transform: translateX(30px) translateY(16px);
+            background-color: cornflowerblue;
+        }
+        .wall-home3-window2 {
+            width: 50px;
+            height: 60px;
+            border: 2px solid rgb(98, 2, 2);
+            transform: translateX(117px) translateY(-47px);
+            background-color: darkgrey;
+        }
+        .wall-home3-window3 {
+            width: 50px;
+            height: 60px;
+            border: 2px solid rgb(98, 2, 2);
+            transform: translateX(30px) translateY(-16px);
+            background-color: darkgrey;
+        }
+        .wall-home3-window4 {
+            width: 50px;
+            height: 60px;
+            border: 2px solid rgb(98, 2, 2);
+            transform: translateX(117px) translateY(-80px);
+            background-color: darkgrey;
+        }
+        .wall-home3-window5 {
+            width: 50px;
+            height: 60px;
+            border: 2px solid rgb(98, 2, 2);
+            transform: translateX(117px) translateY(-50px);
+            background-color: cornflowerblue;
+        }
+        .wall-home3-door {
+            width: 50px;
+            height: 92px;
+            border: 2px solid rgb(98, 2, 2);
+            transform: translateX(30px) translateY(-112px);
+            background-color: darkslateblue;
+        }
+        .road {
+            width: 1200px;
+            height: 90px;
+            border: 1px soloid black;
+            background-color: rgb(84, 84, 84);
+            transform: translateY(612px);
+        }
+    </style>
+</head>
+<body>
+    <div id="street">
+        <div class="road">
+            <div style="height: 45px;border-bottom: 3px solid white;"></div>
+        </div>
+        <div class="chimney"></div>
+        <div class="home1">
+            <div class="front-wall">
+                <div class="front-wall-door">
+                    <div style="
+                        width: 15px;
+                        height: inherit;
+                        border-right: 2px solid white;
+                        "></div>
+                </div>
+                <div class="front-wall-window">
+                    <div style="
+                        width: 8px;
+                        height: inherit;
+                        border-right: 2px solid white;
+                    "></div>
+                    <div style="
+                        width: 10px;
+                        border-bottom: 2px solid white;
+                        transform: translateX(10px) translateY(-15px);
+                    "></div>
+                </div>
+                <div class="front-wall-window2">
+                    <div style="
+                        width: 8px;
+                        height: inherit;
+                        border-right: 2px solid white;
+                    "></div>
+                    <div style="
+                        width: 10px;
+                        border-bottom: 2px solid white;
+                        transform: translateX(10px) translateY(-15px);
+                    "></div>
+                </div>
+            </div>
+            <div class="wall">
+                <div class="wall-window">
+                    <div style="
+                        width: 8px;
+                        height: inherit;
+                        border-right: 2px solid white;
+                    "></div>
+                    <div style="
+                        width: 10px;
+                        border-bottom: 2px solid white;
+                        transform: translateX(10px) translateY(-15px);
+                    "></div>
+                </div>
+            </div>
+            <div class="roof-front"></div>
+            <div class="roof"></div>
+        </div>
+        <div class="build1">
+            <div class="roof-build1">
+                <div class="roof-build1-window"></div>
+            </div>
+            <div class="wall-build1">
+                <div class="wall-build1-window1"></div>
+                <div class="wall-build1-window2"></div>
+                <div class="wall-build1-window3"></div>
+                <div class="wall-build1-window4"></div>
+                <div class="wall-build1-window5"></div>
+                <div class="wall-build1-window6"></div>
+                <div class="wall-build1-window7"></div>
+                <div class="wall-build1-window8"></div>
+                <div class="wall-build1-window9"></div>
+                <div class="wall-build1-window10"></div>
+                <div class="wall-build1-window11"></div>
+                <div class="wall-build1-window12"></div>
+                <div class="wall-build1-window13"></div>
+                <div class="wall-build1-window14"></div>
+                <div class="wall-build1-window15"></div>
+                <div class="wall-build1-window16"></div>
+                <div class="wall-build1-window17"></div>
+                <div class="wall-build1-window18"></div>
+                <div class="wall-build1-door">
+                    <div style="width: 19px;
+                                height: inherit;
+                                border-right: 2px solid brown;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bank">
+            <div class="wall-bank"><span style="font-size: 25px;color:white; line-height: 45px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B A N K</span>
+                <div class="bank-window1"></div>
+                <div class="bank-window2"></div>
+                <div class="bank-window3"></div>
+                <div class="bank-window4"></div>
+            </div>
+        </div>
+        <div class="home2">
+            <div class="roof-home2">
+                <div class="roof-home2-window">
+                    <div style="width: 25px;height: inherit; border-right: 2px solid red;"></div>
+                    <div style="border-bottom: 2px solid red;transform:translateY(-25px);"></div>
+                </div>
+            </div>
+            <div class="wall-home2">
+                <div class="wall-home2-window1"></div>
+                <div class="wall-home2-door"></div>
+                <div class="wall-home2-window2"></div>
+            </div>
+            <div style="transform: translateY(-20px);">🌹</div>
+            <div style="transform:translateX(130px) translateY(-42px);">🌹</div>
+        </div>
+        <div class="build2">
+            <div class="wall-build2">
+                <div class="wall-build2-window1">
+                    <div style="width: 20px;height: inherit;border-right: 2px solid black;"></div>
+                    <div style="font-size: 40px; transform: translateX(40px);">✤</div>
+                </div>
+                <div class="wall-build2-window2">
+                    <div style="width: 20px;height: inherit;border-right: 2px solid black;"></div>
+                    <div style="font-size: 40px; transform: translateX(40px);">✤</div>
+                </div>
+                <div class="wall-build2-window3">
+                    <div style="width: 20px;height: inherit;border-right: 2px solid black;"></div>
+                    <div style="font-size: 40px; transform: translateX(40px);">✤</div>
+                </div>
+                <div class="wall-build2-window4">
+                    <div style="width: 20px;height: inherit;border-right: 2px solid black;"></div>
+                </div>
+                <div class="wall-build2-window5">
+                    <div style="width: 20px;height: inherit;border-right: 2px solid black;"></div>
+                    <div style="font-size: 40px; transform: translateX(40px);">✤</div>
+                </div>
+                <div class="wall-build2-window6">
+                    <div style="width: 20px;height: inherit;border-right: 2px solid black;"></div>
+                    <div style="font-size: 40px; transform: translateX(40px);">✤</div>
+                </div>
+                <div class="wall-build2-window7">
+                    <div style="width: 20px;height: inherit;border-right: 2px solid black;"></div>
+                    <div style="font-size: 40px; transform: translateX(40px);">✤</div>
+                </div>
+                <div class="wall-build2-window8">
+                    <div style="width: 20px;height: inherit;border-right: 2px solid black;"></div>
+                </div>
+                <div class="wall-build2-window9">
+                    <div style="width: 20px;height: inherit;border-right: 2px solid black;"></div>
+                    <div style="font-size: 40px; transform: translateX(40px);">✤</div>
+                </div>
+                <div class="wall-build2-window10">
+                    <div style="width: 20px;height: inherit;border-right: 2px solid black;"></div>
+                </div>
+                <div class="wall-build2-window11">
+                    <div style="width: 20px;height: inherit;border-right: 2px solid black;"></div>
+                    <div style="font-size: 40px; transform: translateX(40px);">✤</div>
+                </div>
+                <div class="wall-build2-window12">
+                    <div style="width: 20px;height: inherit;border-right: 2px solid black;"></div>
+                </div>
+                <div class="wall-build2-door1">
+                    <div style="width: 40px;height: inherit;border-right: 2px solid black;"></div>
+                </div>
+                <div class="wall-build2-door2">
+                    <div style="width: 40px;height: inherit;border-right: 2px solid black;"></div>
+                </div>
+            </div>
+            <div class="roof-build2"></div>
+        </div>
+        <div class="home3">
+            <div class="roof-home3">
+                <div class="roof-home3-window1">
+                    <div style="width: 15px;height: inherit;border-right: 2px solid rgb(98, 2, 2);"></div>
+                    <div style="height: 15px; border-bottom: 2px solid rgb(98, 2, 2);transform: translateY(-35px);"></div>
+                </div>
+                <div class="roof-home3-window2">
+                    <div style="width: 15px;height: inherit;border-right: 2px solid rgb(98, 2, 2);"></div>
+                    <div style="height: 15px; border-bottom: 2px solid rgb(98, 2, 2);transform: translateY(-35px);"></div>
+                </div>
+            </div>
+            <div class="wall-home3">
+                <div class="wall-home3-window1">
+                    <div style="width: 30px;height: inherit;border-right: 2px solid rgb(98, 2, 2);"></div>
+                </div>
+                <div class="wall-home3-window2">
+                    <div style="width: 30px;height: inherit;border-right: 2px solid rgb(98, 2, 2);"></div>
+                </div>
+                <div class="wall-home3-window3">
+                    <div style="width: 30px;height: inherit;border-right: 2px solid rgb(98, 2, 2);"></div>
+                </div>
+                <div class="wall-home3-window4">
+                    <div style="width: 30px;height: inherit;border-right: 2px solid rgb(98, 2, 2);"></div>
+                </div>
+                <div class="wall-home3-window5">
+                    <div style="width: 30px;height: inherit;border-right: 2px solid rgb(98, 2, 2);"></div>
+                </div>
+                <div class="wall-home3-door">
+                    <div style="width: 10px;height: inherit;border-right: 2px solid rgb(98, 2, 2);"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
